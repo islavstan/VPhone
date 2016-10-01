@@ -24,12 +24,13 @@
 
     <Button
         android:text="0"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_call"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
         android:id="@+id/button_0"
         android:textSize="28sp" />
 
@@ -39,9 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_0"
         android:textSize="28sp"
+
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
         android:id="@+id/button_8" />
     <Button
         android:text="5"
@@ -51,7 +53,7 @@
         android:textSize="28sp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
         android:id="@+id/button_5" />
 
 
@@ -68,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_5"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
         android:textSize="28sp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
@@ -78,7 +80,7 @@
         android:text="#"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
 
         android:id="@+id/button_grid"
         android:textSize="28sp"
@@ -91,25 +93,10 @@
 
 
     <Button
-        android:text="7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-
-        android:id="@+id/button_7"
-        android:textSize="28sp"
-        android:layout_alignBaseline="@+id/button_8"
-        android:layout_alignBottom="@+id/button_8"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp" />
-
-    <Button
         android:text="1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
 
         android:id="@+id/button_1"
         android:textSize="28sp"
@@ -134,26 +121,41 @@
         android:layout_marginRight="11dp"
         android:layout_marginEnd="11dp" />
 
-    <at.markushi.ui.CircleButton
+    <Button
+        android:text="3"
+        android:textSize="28sp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_2"
+        android:layout_alignLeft="@+id/button_6"
+        android:layout_alignStart="@+id/button_6"
+        android:id="@+id/button_3" />
 
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        app:cb_color="#FDC307"
-        app:cb_pressedRingWidth="8dip"
-        android:id="@+id/button_add"
-        android:src="@drawable/ic_person_add_white_24dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/button_star"
-        android:layout_alignStart="@+id/button_star"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/button_3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/button_0"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="*"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@null"
-        android:layout_marginTop="7dp"
+        android:background="?attr/selectableItemBackground"
         android:id="@+id/button_star"
         android:textSize="30sp"
         android:textAllCaps="false"
@@ -161,50 +163,154 @@
         android:layout_alignLeft="@+id/button_7"
         android:layout_alignStart="@+id/button_7" />
 
+    <TextView
+        android:text="TUV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/button_8"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="JKL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/button_5"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView4" />
+
+    <TextView
+        android:text="ABC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/button_2"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView5" />
+
+    <Button
+        android:text="6"
+        android:textSize="28sp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_6"
+        android:layout_alignBaseline="@+id/button_5"
+        android:layout_alignBottom="@+id/button_5"
+        android:layout_alignLeft="@+id/button_9"
+        android:layout_alignStart="@+id/button_9" />
+
+    <TextView
+        android:text="DEF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/textView2"
+        android:textSize="10dp"
+
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_alignBottom="@+id/button_3"
+        android:layout_alignLeft="@+id/button_back"
+        android:layout_alignStart="@+id/button_back" />
+
+    <TextView
+        android:text="MNO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/button_6"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <Button
+        android:text="9"
+        android:textSize="28sp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_9"
+        android:layout_alignBaseline="@+id/button_8"
+        android:layout_alignBottom="@+id/button_8"
+        android:layout_alignLeft="@+id/button_grid"
+        android:layout_alignStart="@+id/button_grid" />
+
+    <TextView
+        android:text="WXYZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7"
+        android:textSize="10dp"
+        android:layout_alignBottom="@+id/button_9"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+
+    <TextView
+        android:text="GHI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9"
+        android:textSize="10dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_alignBottom="@+id/button_4"
+        android:layout_alignRight="@+id/button_add"
+        android:layout_alignEnd="@+id/button_add" />
+
+    <TextView
+        android:text="PQRS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+
+        android:textSize="10dp"
+
+        android:layout_alignBottom="@+id/button_7"
+        />
+
     <Button
         android:text="4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@null"
+        android:background="?attr/selectableItemBackground"
 
         android:id="@+id/button_4"
         android:textSize="28sp"
         android:layout_alignBaseline="@+id/button_5"
         android:layout_alignBottom="@+id/button_5"
-        android:layout_alignLeft="@+id/button_7"
-        android:layout_alignStart="@+id/button_7" />
+        android:layout_alignLeft="@+id/button_1"
+        android:layout_alignStart="@+id/button_1" />
 
     <Button
-        android:text="9"
-        android:textSize="28sp"
-        android:background="@null"
+        android:text="7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+
+        android:id="@+id/button_7"
+        android:textSize="28sp"
+        android:layout_alignBaseline="@+id/button_8"
         android:layout_alignBottom="@+id/button_8"
-        android:layout_alignLeft="@+id/button_grid"
-        android:layout_alignStart="@+id/button_grid"
-        android:id="@+id/button_9" />
+        android:layout_alignLeft="@+id/button_4"
+        android:layout_alignStart="@+id/button_4" />
 
-    <Button
-        android:text="6"
-        android:textSize="28sp"
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button_5"
-        android:layout_alignRight="@+id/button_9"
-        android:layout_alignEnd="@+id/button_9"
-        android:id="@+id/button_6" />
+    <at.markushi.ui.CircleButton
 
-    <Button
-        android:text="3"
-        android:textSize="28sp"
-        android:background="@null"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button_2"
-        android:layout_alignLeft="@+id/button_6"
-        android:layout_alignStart="@+id/button_6"
-        android:id="@+id/button_3" />
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:cb_color="#FDC307"
+        app:cb_pressedRingWidth="8dip"
+        android:id="@+id/button_add"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:src="@drawable/ic_person_add_white_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView10"
+        android:layout_toEndOf="@+id/textView10" />
+
 
 </RelativeLayout>
