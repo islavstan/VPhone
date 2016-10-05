@@ -1,6 +1,7 @@
 package com.islavdroid.vphone;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import at.markushi.ui.CircleButton;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView textViewDisplay;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String SYMBOL_STAR = "*";
     private static final String SYMBOL_POUND = "#";
     private  Vibrator vibe;
+    private CircleButton button_call;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +65,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonDel.setOnClickListener(this);
         textViewDisplay=(TextView) findViewById(R.id.text_view_display);
 
-
+        button_call=(CircleButton)findViewById(R.id.button_call);
+        button_call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,CallActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
