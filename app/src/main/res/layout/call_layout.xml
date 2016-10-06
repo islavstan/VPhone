@@ -1,33 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ImageView
+        style="@style/BackGroundImageView"
+        android:src="@drawable/a"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:background="#171717"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.7"
+
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="220dp"
-        android:background="@color/colorPrimary">
+        android:id="@+id/user_info"
+        >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/user_profile_photo"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_centerHorizontal="true"
-            android:scaleType="centerCrop"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FFFFFF"
-            android:padding="20dp"
-            android:src="@drawable/a" />
+
         <TextView
+            android:layout_marginTop="70dp"
             android:id="@+id/user_profile_name"
-            android:layout_below="@+id/user_profile_photo"
+            android:textColor="@color/colorForCallLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="Василий Петров"
-            android:textColor="#fff"
+
             android:textSize="24sp"
             android:textStyle="bold" />
         <TextView
@@ -38,8 +54,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:text="+3000.3329333"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+            android:textColor="@color/colorForCallLayout"
+            android:textSize="18sp" />
         <TextView
             android:id="@+id/call"
             android:layout_width="wrap_content"
@@ -48,32 +64,30 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:text="ВЫЗОВ"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+            android:textColor="@color/colorForCallLayout"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
 
         <GridLayout
+            android:layout_below="@+id/user_info"
             android:layout_marginTop="50dp"
             android:id="@+id/grid_layout_keypad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-
+            android:layout_centerHorizontal="true"
             android:columnCount="3"
             android:foregroundGravity="center"
             android:gravity="center"
             android:orientation="horizontal"
             android:rowCount="3"
             android:rowOrderPreserved="false"
-
             android:textAlignment="center"
            >
-
             <RelativeLayout
                 android:layout_width="wrap_content"
-                     android:layout_marginRight="65dp"
+                android:layout_marginRight="65dp"
                 android:layout_height="wrap_content">
                 <ImageButton
                     android:id="@+id/camera"
@@ -81,8 +95,7 @@
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="@drawable/camera"
-                    android:tint="#9E9E9E"
+                    android:src="@drawable/vid"
 
                     android:scaleType="centerCrop"/>
 
@@ -91,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/colorForCallLayout"
                     android:layout_below="@+id/camera"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/text_camera"
@@ -99,11 +112,9 @@
 
             </RelativeLayout>
             <RelativeLayout
-
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
-
 
                 <ImageButton
                     android:id="@+id/dialpad"
@@ -111,8 +122,7 @@
                     android:layout_height="50dp"
                       android:layout_centerHorizontal="true"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="@drawable/key"
-                    android:tint="#9E9E9E"
+                    android:src="@drawable/key2"
 
                     android:scaleType="centerCrop"/>
 
@@ -121,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/colorForCallLayout"
                     android:layout_below="@+id/dialpad"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/text_keyboard" />
@@ -138,8 +148,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="@drawable/plus1"
-                    android:tint="#9E9E9E"
+                    android:src="@drawable/plus2"
+
                     android:layout_centerHorizontal="true"
                     android:scaleType="centerCrop"/>
 
@@ -151,7 +161,7 @@
                     android:layout_below="@+id/add"
                     android:layout_centerHorizontal="true"
                     android:text="добавить"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/colorForCallLayout"
                     android:textSize="12dp" />
             </RelativeLayout>
 
@@ -167,7 +177,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/speaker"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/colorForCallLayout"
                     android:text="динамик"
                     android:textSize="12dp" />
 
@@ -176,8 +186,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="@drawable/speaker2"
-                    android:tint="#9E9E9E"
+                    android:src="@drawable/speak2"
+
                     android:scaleType="centerCrop"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentStart="true" />
@@ -195,8 +205,8 @@
                     android:layout_height="50dp"
                     android:layout_centerHorizontal="true"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="@drawable/pause1"
-                    android:tint="#9E9E9E"
+                    android:src="@drawable/pause2"
+
 
                     android:scaleType="centerCrop"/>
                 <TextView
@@ -205,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pause"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/colorForCallLayout"
                     android:text="удержание"
                     android:textSize="12dp" />
             </RelativeLayout>
@@ -220,8 +230,8 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="?selectableItemBackgroundBorderless"
-                    android:src="@drawable/cutmicrophone"
-                    android:tint="#9E9E9E"
+                    android:src="@drawable/mic"
+
                     android:layout_centerHorizontal="true"
                     android:scaleType="centerCrop"/>
 
@@ -232,18 +242,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/mute"
                     android:layout_centerHorizontal="true"
-                    android:textColor="#9E9E9E"
+                    android:textColor="@color/colorForCallLayout"
                     android:text="без звука"
                     android:textSize="12dp" />
             </RelativeLayout>
-
-
-
-
-
-
-
-
 
             <at.markushi.ui.CircleButton
                 android:layout_marginTop="50dp"
@@ -251,11 +253,9 @@
                 android:layout_width="75dp"
                 android:layout_height="75dp"
                 android:layout_gravity="center"
-
                 android:id="@+id/button_call"
                 app:cb_color="#F44336"
                 android:src="@drawable/ic_call_end_white_24dp"
-
                 app:cb_pressedRingWidth="8dip" />
 
 
@@ -263,6 +263,6 @@
         </GridLayout>
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 
